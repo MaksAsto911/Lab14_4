@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання з масивами</title>
+</head>
+<body>
+    <h1>Операції з масивами</h1>
+
+    <script>
+        // 1. Створення масивів
+        let fruits = ['apple', 'pineapple', 'mango', 'melon', 'grape'];
+        let citrus = ['orange', 'lemon', 'lime'];
+
+        // 2. Вивести масив fruits
+        document.write("Масив fruits: " + fruits.join(", ") + "<br>");
+
+        // 3. Вивести масив citrus
+        document.write("Масив citrus: " + citrus.join(", ") + "<br>");
+
+        // 4. Об'єднати масиви fruits і citrus
+        let combined = fruits.concat(citrus);
+        document.write("Об'єднаний масив fruits і citrus: " + combined.join(", ") + "<br>");
+
+        // 5. Вставити нові елементи після "mango"
+        let index = fruits.indexOf('mango'); // Знайдемо індекс mango
+        if (index !== -1) {
+            fruits.splice(index + 1, 0, 'pear', 'cherry', 'plum', 'raspberry', 'strawberry');
+        }
+        document.write("Масив fruits після вставки: " + fruits.join(", ") + "<br>");
+
+        // 6. Видалити останні 3 елементи масиву fruits
+        fruits.splice(-3); // Видаляємо останні 3 елементи
+        document.write("Масив fruits після видалення останніх 3 елементів: " + fruits.join(", ") + "<br>");
+
+        // 7. Відсортувати масив fruits в алфавітному порядку
+        let fruitsSorted = [...fruits].sort();
+        document.write("Масив fruits, відсортований в алфавітному порядку: " + fruitsSorted.join(", ") + "<br>");
+
+        // 8. Відсортувати масив fruits в зворотному алфавітному порядку
+        let fruitsReverseSorted = [...fruits].sort().reverse();
+        document.write("Масив fruits, відсортований у зворотному алфавітному порядку: " + fruitsReverseSorted.join(", ") + "<br>");
+
+        // 9. Відсортувати масив fruits за довжиною слів
+        let fruitsByLength = [...fruits].sort((a, b) => a.length - b.length);
+        document.write("Масив fruits, відсортований за довжиною слів: " + fruitsByLength.join(", ") + "<br>");
+    </script>
+
+</body>
+</html>
